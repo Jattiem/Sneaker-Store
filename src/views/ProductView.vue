@@ -13,7 +13,7 @@
     </div>
   </section>
   <div v-else>
-    <h1>Hello</h1>
+    loading...
   </div>
 </template>
 
