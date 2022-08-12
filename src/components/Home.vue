@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 h2{
-    color: black;
+    color: black  ;
     /* font-style: bold; */
     /* font-display: b; */
     /* position: fixed; */
@@ -32,7 +32,5 @@ h2{
   /* background-size: cover; */
   background-position: center center;
   background-attachment: fixed; 
-  /* margin-bottom: 50%; */
-  /* padding-bottom: 30%; */
 }
 </style>

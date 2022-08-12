@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 import axios from 'axios';
 
-const moduleduoprojectUrl = "https://node-end-of-module-duo-project.herokuapp.com/";
+const moduleduoprojectUrl = "https://node-end-of-module-project.herokuapp.com/";
 export default createStore({
   state: {
     products: null,
@@ -21,7 +21,7 @@ export default createStore({
   actions: {
 
     async getProducts(context){
-      let res = await axios.get("https://node-end-of-module-duo-project.herokuapp.com/products");
+      let res = await axios.get(moduleduoprojectUrl+"products");
       let {results} = await res.data;
       if(results) {
         context.commit("setProducts", results);
@@ -30,7 +30,7 @@ export default createStore({
     },
     async getSingleProducts(context, id){
       // fetch('https://node-end-of-module-duo-project.herokuapp.com/products/' + id)
-      let res = await axios.get('https://node-end-of-module-duo-project.herokuapp.com/products/' + id);
+      let res = await axios.get(moduleduoprojectUrl+'products/' + id);
       let {results} = await res.data;
        context.commit('setSingleProduct', results[0]);
     }
@@ -39,7 +39,7 @@ export default createStore({
 
   login: async (context, payload) => {
     const { email, password } = payload;
-    fetch("https://node-end-of-module-duo-project.herokuapp.com/login", {
+    fetch(moduleduoprojectUrl+"login", {
       method: "PATCH",
       body: JSON.stringify({
         email: email,
