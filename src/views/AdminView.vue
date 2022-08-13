@@ -28,7 +28,9 @@
       <td><button class="btn btn-primary">Delete</button></td>
     </tr>
   </tbody>
+  
 </table>
+<!-- <div v-else>Loading...</div> -->
   </section>
 </template>
 
