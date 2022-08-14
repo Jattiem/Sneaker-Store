@@ -62,8 +62,31 @@ export default {
 .container{
   margin-top: 170px;
 }
-section{
-  /* margin-bottom: -700px; */
-  /* margin-bottom: -70px; */
+  @media only screen and (min-width:320px) and (max-width: 321px){
+  .card{
+    height: 430px;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 100px;
+  }
+}
+ @media only screen and (min-width:375px) and (max-width: 376px){
+  .card{
+    height: 430px;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 70px;
+  }
+}
+ @media only screen and (min-width:425px) and (max-width: 426px){
+  .card{
+    height: 430px;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 70px;
+  }
 }
 </style>

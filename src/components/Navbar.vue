@@ -30,8 +30,10 @@
         <input class=" form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
       </form>
+      <div class="dicons">
       <div class="personicon"><a href="" class="bi bi-person-fill"></a></div>
       <div class="shopicon"><a href="" class="bi bi-bag-fill"></a></div>
+      </div>
     </div>
   </div>
 </nav>
@@ -98,4 +100,15 @@ img{
   font-size: 30px;
   /* padding-bottom: 10px; */
 }
+@media only screen and (min-width:320px),(min-width:375px)  and (max-width: 321px),(max-width:376px) {
+  .dicons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .shopicon{
+  padding-top: 3px;
+}
+}
+
 </style>

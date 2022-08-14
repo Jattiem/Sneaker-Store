@@ -71,4 +71,5 @@ export default {
     width: 100px;
     /* border: 1px solid gray; */
   }
+
 </style>
