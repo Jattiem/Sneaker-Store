@@ -27,6 +27,11 @@ export default {
     padding-top: 15px;
     font-size: larger;
 }
+i:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
 i{
     padding: 10px;
 }

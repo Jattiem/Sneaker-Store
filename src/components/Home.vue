@@ -6,7 +6,8 @@
             <h2 class="text-center">
               Sneakers
             </h2>
-        <router-link class="button" to="./about">See More</router-link>
+        <router-link type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" to="./about">See More</router-link>
+        <!-- <button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark">Light</button> -->
         </div> 
     </section>
 </template>
