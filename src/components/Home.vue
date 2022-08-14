@@ -19,15 +19,15 @@ export default {
 
 <style scoped>
 h2{
-    color: black  ;
+    color: white;
     /* font-style: bold; */
     /* font-display: b; */
     /* position: fixed; */
     /* position: sticky; */
 }
 .home {
-  background: url(https://i.postimg.cc/q7tP1wv5/600fb10351f585760973c5d23174f5a8.webp),
-   linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background: url(https://i.postimg.cc/xj74cvDc/logo-brand-clothing-shoe-sneakers-png-favpng-Li-Z1c4-Q3s39-AD7-Vhiw64t-WXc-B.jpg),
+   linear-gradient(rgba(0, 0, 0, 0.295), rgb(0, 0, 0));
   background-blend-mode: overlay;
   /* background-size: cover; */
   background-position: center center;

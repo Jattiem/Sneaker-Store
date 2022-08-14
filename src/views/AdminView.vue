@@ -1,8 +1,7 @@
 <template>
   <section v-if="products" class="admin vh-100">
-  <div>
-    <h2 class="h2">Admin</h2>
-  </div>
+    <h2 class="h2 pt-2">Admin</h2>
+    <a href="" class="add">Add product</a>
     <table class="table align-middle mb-0 bg-white">
   <thead class="bg-light">
     <tr>
@@ -24,13 +23,12 @@
       <td>{{product.description}}</td>
       <td><img :src="product.img" class="img-fluid" alt=""></td>
       <td>R {{product.price}}</td>
-      <td><button class="btn btn-primary">Edit</button></td>
-      <td><button class="btn btn-primary">Delete</button></td>
+      <td><a href="" class="iconadmin bi bi-pencil-square"></a></td>
+      <td><a href="" class="iconadmin bi bi-x-square"></a></td>
     </tr>
   </tbody>
   
 </table>
-<!-- <div v-else>Loading...</div> -->
   </section>
 </template>
 
@@ -52,6 +50,17 @@ export default {
 </script>
 
 <style scoped>
+.add{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  /* margin-bottom: 40px; */
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+.iconadmin{
+  font-size: x-large;
+}
   section{
     margin-top: 100px;
     /* margin-top: -200px; */

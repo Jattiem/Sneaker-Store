@@ -4,7 +4,7 @@
   <div class="container">
       <div v-if="products" class="row d-flex justify-content-center">
         <div v-for="product in products" :key="product.product_id" class="card mx-2 bg-light">
-        <div class="center bg-light">
+        <div class="bg-light">
           <img :src="product.img" class="spin card-img-top img-fluid cards" alt="image">
         </div>
           <div class="card-body">
@@ -42,18 +42,7 @@ export default {
 </script>
 
 <style scoped>
-.center {
-  /* background: #FF7A59; */
-  /* background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%); */
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-left: 40px;
-  margin-top: 10px;
-}
+
 .spin{
   transition: all 0.3s ease-in-out;
 }

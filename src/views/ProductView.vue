@@ -2,7 +2,7 @@
   <section  v-if="product"  class="product vh-100">
     <h2 class="h2">Product</h2>
     <div class="card bg-light" style="width: 18rem;">
-      <img :src="product.img" class="card-img-top spin img-fluid" alt="image">
+      <img :src="product.img" class="card-img-top spin img-fluid center" alt="image">
         <div class="card-body bg-light">
           <h2 class="card-title">{{product.title}}</h2>
           <h2 class="card-title">R{{product.price}}</h2>
@@ -33,7 +33,13 @@ export default {
 </script>
 
 <style scoped>
-
+.center {
+  background: #FF7A59;
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+}
 .card{
   display: flex;
   margin-left: auto;
