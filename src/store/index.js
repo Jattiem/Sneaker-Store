@@ -28,6 +28,15 @@ export default createStore({
   },
   actions: {
 
+    // delete product
+deleteProduct: async (context, product_id) => {
+  fetch("https://node-end-of-module-project.herokuapp.com/products/" + product_id, {
+    method: "DELETE",
+  })
+  .then((res) => res.json())
+  .then(() => context.dispatch('getProducts'), alert('Delete was successfull! Refresh the page.'));
+},
+
     // register
 register: async(context, payload) => {
   const { user_fullname, email, password, phone_number, join_date } = payload;
@@ -114,6 +123,8 @@ login: async(context, payload) => {
         //   name: "products"
         // })
       });
+
+      
   },
   modules: {
   }

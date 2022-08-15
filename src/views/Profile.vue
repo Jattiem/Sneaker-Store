@@ -83,7 +83,5 @@ export default {
 section{
     padding-top: 140px;
 }
-.second{
-    height: ;
-}
+
 </style>

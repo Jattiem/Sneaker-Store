@@ -40,7 +40,7 @@
     </div>
   </div>
 </nav> -->
-<h3 class="text-center">No products added</h3>
+<h3 class="text-center">You currently have no products in your cart</h3>
   </section>
 </template>
 
