@@ -27,7 +27,6 @@
       <td><a href="" class="iconadmin bi bi-x-square"></a></td>
     </tr>
   </tbody>
-  
 </table>
   </section>
 </template>
@@ -50,6 +49,16 @@ export default {
 </script>
 
 <style scoped>
+a{
+  color: black;
+}
+h2{
+  margin-top: 160px;
+}
+/* nav{
+  display: flex;
+  justify-content: center;
+} */
 .add{
   display: flex;
   justify-content: flex-end;
@@ -66,10 +75,18 @@ export default {
     /* margin-top: -200px; */
     margin-left: 20px;
     margin-right: 20px;
+    /* margin-bottom: 100px; */
   }
   img{
     width: 100px;
     /* border: 1px solid gray; */
   }
+@media only screen and (min-width:320px)  and (max-width: 321px) {
+    tr{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 140px;
+    }
+};
 
 </style>

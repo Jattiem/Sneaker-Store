@@ -8,10 +8,19 @@
           <h2 class="card-title1">{{product.title}}</h2>
           <h2 class="card-title">R{{product.price}}</h2>
           <h2 class="card-title">{{product.description}}</h2>
-              <button class="btn btn-dark text-white">Add to cart</button>
+              <button class="btn btn-dark text-white">Add to Cart</button>
         </div>           
     </div>
     </div>
+    <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><router-link class="page-link"  to="/products">Go back</router-link></li>
+    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
+    <li class="page-item"><a class="page-link" href="/">2</a></li>
+    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
+    <!-- <li class="page-item"><router-link class="page-link"  to="/register">Next</router-link></li> -->
+  </ul>
+</nav>
   </section>
   <div v-else>
     loading...
@@ -34,8 +43,13 @@ export default {
 </script>
 
 <style scoped>
-.container{
-  /* margin-top: 10px; */
+nav{
+  display: flex;
+  justify-content: center;
+}
+.page-link{
+  color: rgba(0, 0, 0, 0.795);
+  /* background-color: gray; */
 }
 .card{
   display: flex;
@@ -52,6 +66,7 @@ img{
   align-items: center;
   margin-left: 50px;
 }
+
 section{
   margin-top: 100px;
   margin-bottom: 120px;

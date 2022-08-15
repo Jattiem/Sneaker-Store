@@ -1,12 +1,12 @@
 <template>
     <section class="home vh-100">
         <div id="title" class="container  d-flex justify-content-center align-items-center flex-column h-100">
-            <h2 class="text-center">Hi</h2>
+            <!-- <h2 class="text-center">Hi</h2> -->
             <h2 class="text-center">Welcome to</h2>
             <h2 class="text-center">
               Sneakers
             </h2>
-        <router-link type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" to="./about">See More</router-link>
+        <router-link type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" to="./products">See More</router-link>
         <!-- <button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark">Light</button> -->
         </div> 
     </section>

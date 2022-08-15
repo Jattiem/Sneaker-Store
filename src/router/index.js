@@ -6,6 +6,10 @@ import LoginView from '../views/LoginView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import AdminView from '../views/AdminView.vue';
 import AboutView from '../views/AboutView.vue';
+import CartView from '../views/Cart.vue';
+import Profile from '../views/Profile.vue';
+import contact from '../views/Contact.vue';
+
 const routes = [
   {
     path: '/',
@@ -43,7 +47,21 @@ const routes = [
     name: 'admin',
     component: AdminView
   },
-
+  {
+    path: '/cart',
+    name: 'cart',
+    component: CartView
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: contact
+  },
 ]
 
 

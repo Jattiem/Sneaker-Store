@@ -18,11 +18,16 @@ Contemporary sneakers are largely made from synthetic materials, and the materia
 </section>
 </template>
 <style scoped>
+.page-link{
+  color: rgba(0, 0, 0, 0.795);
+  /* background-color: gray; */
+}
 section{
 margin-top: 100px;    
 }
 h2{
     padding-top: 10px;
+    margin-top: 160px;
 }
 p{
     border: 1px solid gray;
@@ -33,11 +38,20 @@ p{
     display: flex;
     font-size: larger;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
 }
 nav{
     display: flex;
     justify-content: center;
+}
+  @media only screen and (min-width:300px) and (max-width: 301px){
+  p{
+    width: 200px;
+  }
+  .par{
+    /* margin-right: 300px; */
+    margin-left: 60px;
+  }
 }
   @media only screen and (min-width:320px) and (max-width: 321px){
   p{

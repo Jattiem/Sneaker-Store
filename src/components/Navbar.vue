@@ -11,28 +11,35 @@
           <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" aria-current="page" to="/about">About</router-link>
-        </li>
-        <li class="nav-item">
           <router-link class="nav-link"  to="/products">Products</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link"  to="/login">login</router-link>
+          <router-link class="nav-link"  to="/login">Login</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link"  to="/register">Register</router-link>
         </li>
         <li class="nav-item">
+          <router-link class="nav-link"  to="/contact">Contact</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" aria-current="page" to="/about">About</router-link>
+        </li>
+        <li class="nav-item">
           <router-link class="nav-link"  to="/admin">Admin</router-link>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class=" form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="d-flex search" role="search">
+        <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
         <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
       </form>
       <div class="dicons">
-      <div class="personicon"><a href="" class="bi bi-person-fill"></a></div>
-      <div class="shopicon"><a href="" class="bi bi-bag-fill"></a></div>
+      <div class="personicon">
+        <router-link class="nav-link bi bi-person-fill"  to="/profile"></router-link>
+        </div>
+      <div class="shopicon">
+        <router-link class="nav-link bi bi-bag-fill" to="/cart"></router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -47,6 +54,7 @@ export default {
 </script>
 
 <style>
+
 .spin{
   transition: all 0.3s ease-in-out;
 }
@@ -94,6 +102,14 @@ img{
   /* height: 20px; */
   font-size: 25px;
   /* padding-bottom: px; */
+  padding-bottom: 16px;
+}
+.shopicon:hover{
+  color: black;
+}
+
+.personicon:hover{
+  color: black  ;
 }
 .personicon{
   /* height: 20px; */
@@ -106,9 +122,34 @@ img{
     justify-content: center;
     margin-top: 10px;
   }
+
   .shopicon{
   padding-top: 3px;
 }
 }
-
+@media only screen and (min-width: 300px) and (max-width: 301px) {
+  .search{
+    display: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 321px) {
+  .search{
+    display: none;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 376px) {
+  .search{
+    display: none;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 426px) {
+  .search{
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 769px) {
+  .search{
+    display: none;
+  }
+}
 </style>

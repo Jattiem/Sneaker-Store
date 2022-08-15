@@ -6,65 +6,132 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 10px;">
           <div class="card-body">
             <h3 class="pb-3">Registration Form</h3>
-            <form>
+            <form @submit.prevent="register" method="POST">
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" placeholder="First Name"/>
+                    <input type="text" v-model="user_fullname" id="user_fullname" placeholder="user_fullname" required class="form-control form-control-lg"/>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
-
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Last Name"/>
+                    <input type="password" v-model="password" id="password" placeholder="password" minlength="8" maxlength="15" required class="form-control form-control-lg"/>
                   </div>
-
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-4 pb-2">
-
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" placeholder="Email"/>
+                    <input class="form-control form-control-lg" type="email" v-model="email" id="email" placeholder="email" required/>
                   </div>
-
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
-
                   <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" placeholder="Phone Number"/>
+                    <input class="form-control form-control-lg" type="tel" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" maxlength="10" required/>
                   </div>
-
                 </div>
               </div>
-              <div class="">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+              <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline date">
+                    <input class="form-control form-control-lg" type="date" v-model="join_date" id="join_date" placeholder="Enter current date" required/>
+                  </div>
+                </div>
+              <div class="row">
+                <input v-on:click="submit" class="btn btn-dark btn-lg" type="submit" value="Register" />
               </div>
             </form>
+
+            <!-- <form @submit.prevent="register" method="POST">
+<label for="fullname">Name:</label><br>
+<input type="text" v-model="user_fullname" id="user_fullname" placeholder="user_fullname" required><br>
+<label for="email">Email:</label><br>
+<input type="email" v-model="email" id="email" placeholder="email" required><br>
+<label for="password">Password:</label><br>
+<input type="password" v-model="password" id="password" placeholder="password" minlength="8" maxlength="15" required><br>
+<label for="phone_number">Phone Number:</label><br>
+<input type="tel" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" maxlength="10" required><br>
+<label for="date">Date:</label><br>
+<input type="date" v-model="join_date" id="join_date" placeholder="Enter current date" required><br>
+<button class="mt-4" v-on:click="submit">Register</button> -->
+
+
+            
           </div>
         </div>
       </div>
     </div>
   </div>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><router-link class="page-link"  to="/login">Previous</router-link></li>
+    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
+    <li class="page-item"><a class="page-link" href="/">2</a></li>
+    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
+    <li class="page-item"><router-link class="page-link"  to="/contact">Next</router-link></li>
+  </ul>
+</nav>
 </section>
 </template>
 
 <script>
 export default {
-
+data(){
+    return{
+       user_fullname: '',
+       email: '',
+       password: '',
+      //  userRole: '',
+       phone_number: '',
+       join_date: '',
+    }
+},
+methods: {
+register(){
+this.$store.dispatch('register', {
+                user_fullname: this.user_fullname,
+                email: this.email,
+                password: this.password,
+                // userRole: this.userRole,
+                phone_number: this.phone_number,
+                join_date: this.join_date,
+            })
+}
+}
 }
 </script>
 
 <style scoped>
+.date{
+  /* padding-left: 200px; */
+}
+.page-link{
+  color: rgba(0, 0, 0, 0.795);
+  /* background-color: gray; */
+  /* margin-bottom: 10px; */
+  margin-top: -10px;
+}
+nav{
+  display: flex;
+  justify-content: center;
+}
 .card{
-  height: 300px;
+  height: 370px;
 }
 .container{
   margin-top: 170px;
 }
+  @media only screen and (min-width:300px) and (max-width: 301px){
+  .card{
+    height: 530px;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 100px;
+  }
+}
   @media only screen and (min-width:320px) and (max-width: 321px){
   .card{
-    height: 430px;
+    height: 520px;
   }
   section{
     /* padding-top: -40px; */
@@ -73,7 +140,7 @@ export default {
 }
  @media only screen and (min-width:375px) and (max-width: 376px){
   .card{
-    height: 430px;
+    height: 520px;
   }
   section{
     /* padding-top: -40px; */
@@ -82,7 +149,7 @@ export default {
 }
  @media only screen and (min-width:425px) and (max-width: 426px){
   .card{
-    height: 430px;
+    height: 520px;
   }
   section{
     /* padding-top: -40px; */

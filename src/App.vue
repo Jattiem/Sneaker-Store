@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style>
-
+*{
+  scroll-behavior: smooth;
+}
 </style>
