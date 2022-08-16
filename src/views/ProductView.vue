@@ -3,7 +3,7 @@
   <section  v-if="product"  class="product">
     <h2 class="h2">Product</h2>
     <div class="container">
-    <div class="card bg-light" style="width: 18rem;">
+    <div class="card bg-light">
       <img :src="product.img" class="card-img-top spin img-fluid center" alt="image">
         <div class="card-body bg-light">
           <h2 class="card-title1">{{product.title}}</h2>
@@ -95,5 +95,14 @@ section{
 /* transition-delay: .50s ease-out; */
 transform: rotate(-20deg);
 /* transition: transform .7s ease-in-out; */
+}
+  @media only screen and (min-width:300px) and (max-width: 301px){
+  .card{
+    height: 25rem;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 150px;
+  }
 }
 </style>

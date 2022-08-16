@@ -11,24 +11,24 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" v-model="user_fullname" id="user_fullname" placeholder="user_fullname" required class="form-control form-control-lg"/>
+                    <input type="text" v-model="user_fullname" id="user_fullname" placeholder="Enter Your Full Name" required class="form-control form-control-lg"/>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="password" v-model="password" id="password" placeholder="password" minlength="8" maxlength="15" required class="form-control form-control-lg"/>
+                    <input type="password" v-model="password" id="password" placeholder="Enter Your Password" minlength="8" maxlength="15" required class="form-control form-control-lg"/>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input class="form-control form-control-lg" type="email" v-model="email" id="email" placeholder="email" required/>
+                    <input class="form-control form-control-lg" type="email" v-model="email" id="email" placeholder="Enter Your Email" required/>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input class="form-control form-control-lg" type="tel" v-model="phone_number" id="phone_number" placeholder=" Enter your phone number" maxlength="10" required/>
+                    <input class="form-control form-control-lg" type="tel" v-model="phone_number" id="phone_number" placeholder=" Enter Your Phone Number" maxlength="10" required/>
                   </div>
                 </div>
               </div>

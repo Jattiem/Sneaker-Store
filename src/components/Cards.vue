@@ -1,38 +1,53 @@
 <template>
-<section class="products vh-100">
-  <h2 class="h2">All Products</h2>
-  <div class="container">
-    <div class="row sort">
-      <div class="col-md-3">
+  <section class="products vh-100">
+    <h2 class="h2">All Products</h2>
+    <div class="container">
+      <div class="row sort">
+        <div class="col-md-3">
           <label for="sortby">Sort by:</label>
-            <select class="form-select" name="sort-by">
-              <option value="Ascending">Ascending</option>
-              <option value="Descending">Descending</option>
-            </select>
-      </div>
-      <div class="col-md-3">
-          <label for="sortby">Sort by:</label>
-            <select class="form-select" name="sort-by">
-              <option value="Ascending">Max price</option>
-              <option value="Descending">Min price</option>
-            </select>
-      </div>
-    </div>
-      <div v-if="products" class="row d-flex justify-content-center">
-        <div v-for="product in products" :key="product.product_id" class="card mx-2 bg-light">
-        <div class="bg-light">
-          <img :src="product.img" class="spin card-img-top img-fluid cards" alt="image">
+          <select class="form-select" name="sort-by">
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+          </select>
         </div>
+        <div class="col-md-3">
+          <label for="sortby">Sort by:</label>
+          <select class="form-select" name="sort-by">
+            <option value="Ascending">Max price</option>
+            <option value="Descending">Min price</option>
+          </select>
+        </div>
+      </div>
+      <div v-if="products" class="row d-flex justify-content-center">
+        <div
+          v-for="product in products"
+          :key="product.product_id"
+          class="card mx-2 bg-light"
+        >
+          <div class="bg-light">
+            <img
+              :src="product.img"
+              class="spin card-img-top img-fluid cards"
+              alt="image"
+            />
+          </div>
           <div class="card-body">
-            <h5 class="card-title">{{product.title}}</h5>
-            <h5>R {{product.price}}</h5>
-            <!-- <router-link class="btn btn-primary"  to="/singleproduct">View</router-link> -->          
+            <h5 class="card-title">{{ product.title }}</h5>
+            <h5>R {{ product.price }}</h5>
+            <!-- <router-link class="btn btn-primary"  to="/singleproduct">View</router-link> -->
             <!-- <router-link :to="{name:'singleProduct', params:{id:product.id}}"> -->
-              <router-link :to="{name: 'singleProduct', params:{id: product.product_id}}">
-                <button id="viewproduct" class="btn btn-dark text-black w-5" >View</button>
-                <br>
-                <button id="add" class="btn btn-dark text-black">Cart</button>
-              </router-link>
+            <router-link
+              :to="{
+                name: 'singleProduct',
+                params: { id: product.product_id },
+              }"
+            >
+              <button id="viewproduct" class="btn btn-dark text-black w-5">
+                View
+              </button>
+              <br />
+              <button id="add" class="btn btn-dark text-black">Cart</button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -48,33 +63,33 @@
           <div class="dot-spinner__dot"></div>
         </div>
       </div>
-  </div>
-  
-  <div class="bottom"></div>
-</section>
+    </div>
+
+    <div class="bottom"></div>
+  </section>
 </template>
 
 <script>
 export default {
-    props: ["product"],
+  props: ["product"],
 
-  computed:{
-    products(){
+  computed: {
+    products() {
       return this.$store.state.products;
-    }
+    },
   },
 
- mounted(){
-    this.$store.dispatch('getProducts');
+  mounted() {
+    this.$store.dispatch("getProducts");
     // this.$store.dispatch('clearSingleProduct');
   },
-}
+};
 </script>
 
 <style scoped>
 .dot-spinner {
   --uib-size: 2.8rem;
-  --uib-speed: .9s;
+  --uib-speed: 0.9s;
   --uib-color: #183153;
   position: relative;
   left: 39rem;
@@ -99,7 +114,7 @@ export default {
 }
 
 .dot-spinner__dot::before {
-  content: '';
+  content: "";
   height: 20%;
   width: 20%;
   border-radius: 50%;
@@ -181,104 +196,109 @@ export default {
 
 /* /////////////////////////////////////////////////////////////////////// */
 .card {
- background: rgb(236, 236, 236);
- box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 button {
- color: #090909;
- padding: 0.7em 1.7em;
- font-size: 18px;
- border-radius: 0.5em;
- background: #e8e8e8;
- border: 1px solid #e8e8e8;
- transition: all .3s;
- box-shadow: 6px 6px 12px #c5c5c5,
-             -6px -6px 12px #ffffff;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
 button:active {
- color: #666;
- box-shadow: inset 4px 4px 12px #c5c5c5,
-             inset -4px -4px 12px #ffffff;
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
-.sort{
+.sort {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
 }
-#viewproduct{
+#viewproduct {
   width: 109px;
   margin-bottom: 10px;
   height: 50px;
 }
-#add{
+#add {
   width: 109px;
   height: 50px;
 }
-.page-link{
+.page-link {
   color: rgba(0, 0, 0, 0.795);
   /* background-color: gray; */
 }
-h2{
+h2 {
   margin-top: 160px;
 }
-nav{
-    display: flex;
-    justify-content: center;
+nav {
+  display: flex;
+  justify-content: center;
 }
-.spin{
+.spin {
   transition: all 0.3s ease-in-out;
 }
 
 .spin:hover {
-/* transition: .50s ease; */
-/* transition-delay: .50s ease-out; */
-transform: rotate(-20deg);
-/* transition: transform .7s ease-in-out; */
+  /* transition: .50s ease; */
+  /* transition-delay: .50s ease-out; */
+  transform: rotate(-20deg);
+  /* transition: transform .7s ease-in-out; */
 }
-  .cards{
-    object-fit: cover;
-    height: 150px;
-    width: 300px;
-    border-radius: 1px;
-    border: 1px;
-  }
-  section{
-    margin-top: 100px;
-    /* padding-bottom: 100px; */
-  }
-.products{
+.cards {
+  object-fit: cover;
+  height: 150px;
+  width: 300px;
+  border-radius: 1px;
+  border: 1px;
+}
+section {
+  margin-top: 100px;
+  /* padding-bottom: 100px; */
+}
+.products {
   background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.24'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center center fixed;
-background-size: cover;
-
 }
 
-  .card{
+.card {
+  height: 360px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+.h2 {
+  padding-top: 10px;
+}
+.bottom {
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 300px),
+  (min-width: 320px),
+  (min-width: 375px) and (min-width: 301px),
+  (max-width: 321px),
+  (min-width: 376px) {
+  .bottom {
+    padding-bottom: 130px;
+  }
+
+    .card{
     height: 360px;
     width: 250px;
     margin-bottom: 10px;
   }
-  .h2{
-    padding-top: 10px;
+}
+@media only screen and (min-width: 768px) and (max-width: 769px) {
+  .bottom {
+    padding-bottom: 100px;
   }
-.bottom{
-  padding-bottom: 100px;
 }
-@media only screen and (min-width:300px), (min-width:320px),(min-width:375px)  and (min-width:301px), (max-width: 321px),(min-width:376px) {
-  .bottom{
-  padding-bottom: 130px;
-}
-}
-@media only screen and (min-width:768px)  and (max-width: 769px) {
-  .bottom{
-  padding-bottom: 100px;
-}
-}
-@media only screen and (min-width:1024px)  and (max-width: 1026px) {
-  .bottom{
-  padding-bottom: 100px;
-}
-
+@media only screen and (min-width: 1024px) and (max-width: 1026px) {
+  .bottom {
+    padding-bottom: 100px;
+  }
 }
 </style>
