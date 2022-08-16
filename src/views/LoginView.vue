@@ -56,8 +56,9 @@
             </div>
             <a href="#!">Forgot password?</a>
           </div> -->
-
-                    <button  v-on:click="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+<div class="row">
+  <button  v-on:click="submit" class="btn btn-dark btn-block">Login</button>
+</div>
         </form>
           </div>
         </div>
@@ -96,7 +97,12 @@ this.$store.dispatch('login', {
 </script>
 
 <style scoped>
-
+.card{
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  10px 10px 10px #cccccc,
+             -10px -10px 10px #ffffff;
+}
 .page-link{
   color: rgba(0, 0, 0, 0.795);
   /* background-color: gray; */

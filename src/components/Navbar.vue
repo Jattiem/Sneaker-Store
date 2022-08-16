@@ -92,7 +92,8 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: black; 
+  color: black;
+  font-weight: bold;
 }
 img{
   height: 80px;

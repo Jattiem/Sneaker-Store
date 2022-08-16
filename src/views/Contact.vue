@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="text-center">
+                <div class="text-center row">
                 <button type="submit" class="btn btn-dark">Submit</button>
             </div>
             </form>
@@ -60,7 +60,7 @@
     <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
     <li class="page-item"><a class="page-link" href="/">2</a></li>
     <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/admin">Next</router-link></li>
+    <li class="page-item"><router-link class="page-link"  to="/about">Next</router-link></li>
   </ul>
 </nav>
 </section>
@@ -91,6 +91,10 @@ nav{
 }
 .card{
   height: 360px;
+  border-radius: 10px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  10px 10px 10px #cccccc,
+             -10px -10px 10px #ffffff;
 }
 .container{
   margin-top: 170px;

@@ -37,7 +37,7 @@
                   </div>
                 </div>
               <div class="row">
-                <input v-on:click="submit" class="btn btn-dark btn-lg" type="submit" value="Register" />
+                <input v-on:click="submit" class="btn btn-dark " type="submit" value="Register" />
               </div>
             </form>
 
@@ -116,6 +116,10 @@ nav{
 }
 .card{
   height: 370px;
+  border-radius: 10px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  10px 10px 10px #cccccc,
+             -10px -10px 10px #ffffff;
 }
 .container{
   margin-top: 170px;

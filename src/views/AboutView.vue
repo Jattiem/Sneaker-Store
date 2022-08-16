@@ -1,5 +1,6 @@
 <template>
 <section class="about vh-100">
+  <!-- <div class="card"> -->
     <h2>About</h2>
     <p class="par">Sneakers (also called trainers, athletic shoes, tennis shoes, gym shoes, kicks, sport shoes, flats, running shoes, or runners) are shoes primarily designed for sports or other forms of physical exercise, but which are now also widely used for everyday casual wear.
 
@@ -8,11 +9,11 @@ Since their popularization by companies such as Converse, Nike and Spalding in t
 Contemporary sneakers are largely made from synthetic materials, and the materials and manufacturing process produce, on average, about 14 kg (31 lb) of CO2 emissions.Some companies are trying to substitute more sustainable materials in their manufacture.About 90% of shoes end up in landfills at end of life</p>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/">Previous</router-link></li>
+    <li class="page-item"><router-link class="page-link"  to="/contact">Previous</router-link></li>
     <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
     <li class="page-item"><a class="page-link" href="/">2</a></li>
     <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/products">Next</router-link></li>
+    <li class="page-item"><router-link class="page-link"  to="/admin">Next</router-link></li>
   </ul>
 </nav>
 </section>
@@ -25,6 +26,8 @@ Contemporary sneakers are largely made from synthetic materials, and the materia
 section{
 margin-top: 100px;    
 }
+
+
 h2{
     padding-top: 10px;
     margin-top: 160px;
@@ -39,6 +42,10 @@ p{
     font-size: larger;
     justify-content: center;
     padding: 30px;
+    border-radius: 10px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  10px 10px 10px #cccccc,
+             -10px -10px 10px #ffffff;
 }
 nav{
     display: flex;

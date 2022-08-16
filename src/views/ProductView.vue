@@ -1,13 +1,6 @@
 <template>
   <section  v-if="product"  class="product">
     <h2 class="h2">Product</h2>
-    <div class="col-md-3">
-                        <label for="sortby">Sort by:</label>
-                        <select class="form-select" name="sort-by">
-                            <option value="Ascending">Ascending</option>
-                            <option value="Descending">Descending</option>
-                        </select>
-                    </div>
     <div class="container">
     <div class="card bg-light" style="width: 18rem;">
       <img :src="product.img" class="card-img-top spin img-fluid center" alt="image">
@@ -15,7 +8,7 @@
           <h2 class="card-title1">{{product.title}}</h2>
           <h2 class="card-title">R{{product.price}}</h2>
           <!-- <h2 class="card-title">{{product.description}}</h2> -->
-              <button class="btn btn-dark text-white">Add to Cart</button>
+              <button class="btn btn-dark text-black">Add to Cart</button>
         </div>           
     </div>
     </div>
@@ -50,6 +43,23 @@ export default {
 </script>
 
 <style scoped>
+button {
+ color: #090909;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+button:active {
+ color: #666;
+ box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
 nav{
   display: flex;
   justify-content: center;
