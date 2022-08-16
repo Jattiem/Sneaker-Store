@@ -55,7 +55,10 @@ register: async(context, payload) => {
     }),
   })
     .then((response) => response.json())
-    .then((json) => context.commit("setUser", json), alert(`Your Registration was Successfull. Welcome!`));
+    .then((json) => context.commit("setUser", json),
+    
+    router.push({name: "login"}),
+     alert(`Your Registration was Successfull. Please login!`));
 },
 // login
 login: async(context, payload) => {
@@ -71,7 +74,7 @@ login: async(context, payload) => {
     }),
   })
   if(result){
-    router.push({name: "home"})
+    router.push({name: "landing"})
     alert('WELCOME')
   } else {
     this.errMsg = `

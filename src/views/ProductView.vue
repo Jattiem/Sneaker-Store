@@ -1,4 +1,5 @@
 <template>
+<Navbar/>
   <section  v-if="product"  class="product">
     <h2 class="h2">Product</h2>
     <div class="container">
@@ -12,15 +13,6 @@
         </div>           
     </div>
     </div>
-    <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/products">Go back</router-link></li>
-    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
-    <li class="page-item"><a class="page-link" href="/">2</a></li>
-    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <!-- <li class="page-item"><router-link class="page-link"  to="/register">Next</router-link></li> -->
-  </ul>
-</nav>
   </section>
   <div v-else>
     loading...
@@ -28,17 +20,18 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
 export default {
-	computed:{
-		product(){
-			return this.$store.state.singleproduct;
-		}
-	},
-	mounted(){
-		this.$store.dispatch('getSingleProducts', this.$route.params.id)
-	},
-  methods:{
-  }
+    computed: {
+        product() {
+            return this.$store.state.singleproduct;
+        }
+    },
+    mounted() {
+        this.$store.dispatch("getSingleProducts", this.$route.params.id);
+    },
+    methods: {},
+    components: { Navbar }
 };
 </script>
 

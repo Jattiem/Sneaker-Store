@@ -1,4 +1,5 @@
 <template>
+<NewNav/>
     <section class="vh-100 gradient-custom">
   <div class="container">
     <div class="row justify-content-center align-items-center h-100">
@@ -37,7 +38,7 @@
                   </div>
                 </div>
               <div class="row">
-                <input v-on:click="submit" class="btn btn-dark " type="submit" value="Register" />
+                <input v-on:click="submit" class="btn btn-dark input" type="submit" value="Register" />
               </div>
             </form>
 
@@ -61,48 +62,46 @@
       </div>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/login">Previous</router-link></li>
-    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
-    <li class="page-item"><a class="page-link" href="/">2</a></li>
-    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/contact">Next</router-link></li>
-  </ul>
-</nav>
 </section>
 </template>
 
 <script>
+import NewNav from '@/components/NewNav.vue';
 export default {
-data(){
-    return{
-       user_fullname: '',
-       email: '',
-       password: '',
-      //  userRole: '',
-       phone_number: '',
-       join_date: '',
-    }
-},
-methods: {
-register(){
-this.$store.dispatch('register', {
+    data() {
+        return {
+            user_fullname: "",
+            email: "",
+            password: "",
+            //  userRole: '',
+            phone_number: "",
+            join_date: "",
+        };
+    },
+    methods: {
+        register() {
+            this.$store.dispatch("register", {
                 user_fullname: this.user_fullname,
                 email: this.email,
                 password: this.password,
                 // userRole: this.userRole,
                 phone_number: this.phone_number,
                 join_date: this.join_date,
-            })
-}
-}
+            });
+        }
+    },
+    components: { NewNav }
 }
 </script>
 
 <style scoped>
-.date{
-  /* padding-left: 200px; */
+section{
+  overflow-x: hidden; 
+}
+.input{
+  width: 97%;
+  margin-left: 10px;
+  height: 45px;
 }
 .page-link{
   color: rgba(0, 0, 0, 0.795);
@@ -130,7 +129,7 @@ box-shadow:  10px 10px 10px #cccccc,
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
   @media only screen and (min-width:320px) and (max-width: 321px){
@@ -139,7 +138,7 @@ box-shadow:  10px 10px 10px #cccccc,
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
 }
  @media only screen and (min-width:375px) and (max-width: 376px){
@@ -148,7 +147,7 @@ box-shadow:  10px 10px 10px #cccccc,
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 70px;
+    margin-bottom: 140px;
   }
 }
  @media only screen and (min-width:425px) and (max-width: 426px){
@@ -157,7 +156,7 @@ box-shadow:  10px 10px 10px #cccccc,
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 70px;
+    margin-bottom: 150px;
   }
 }
 </style>

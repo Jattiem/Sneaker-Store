@@ -48,15 +48,6 @@
           <div class="dot-spinner__dot"></div>
         </div>
       </div>
-      <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/">Previous</router-link></li>
-    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
-    <li class="page-item"><a class="page-link" href="/">2</a></li>
-    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/login">Next</router-link></li>
-  </ul>
-</nav>
   </div>
   
   <div class="bottom"></div>
@@ -91,6 +82,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: var(--uib-size);
   width: var(--uib-size);
 }
@@ -273,7 +265,7 @@ background-size: cover;
 .bottom{
   padding-bottom: 100px;
 }
-@media only screen and (min-width:320px),(min-width:375px)  and (max-width: 321px),(min-width:376px) {
+@media only screen and (min-width:300px), (min-width:320px),(min-width:375px)  and (min-width:301px), (max-width: 321px),(min-width:376px) {
   .bottom{
   padding-bottom: 130px;
 }

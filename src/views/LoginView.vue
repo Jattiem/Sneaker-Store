@@ -30,6 +30,7 @@
     </div>
   </div>
   </section> -->
+  <NewNav/>
   <section class="vh-100 gradient-custom login">
   <div class="container">
     <div class="row justify-content-center align-items-center h-100">
@@ -57,7 +58,7 @@
             <a href="#!">Forgot password?</a>
           </div> -->
 <div class="row">
-  <button  v-on:click="submit" class="btn btn-dark btn-block">Login</button>
+  <button  v-on:click="submit" class="login btn btn-dark btn-block">Login</button>
 </div>
         </form>
           </div>
@@ -65,39 +66,87 @@
       </div>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/products">Previous</router-link></li>
-    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
-    <li class="page-item"><a class="page-link" href="/">2</a></li>
-    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/register">Next</router-link></li>
-  </ul>
-</nav>
 </section>
 </template>
 
 <script>
+import NewNav from '@/components/NewNav.vue';
 export default {
-data(){
-    return{
-       email: '',
-       password: '',
-    }
-},
-methods: {
-login(){
-this.$store.dispatch('login', {
+    data() {
+        return {
+            email: "",
+            password: "",
+        };
+    },
+    methods: {
+        login() {
+            this.$store.dispatch("login", {
                 email: this.email,
                 password: this.password,
-            })
-}
-}
+            });
+        }
+    },
+    components: { NewNav }
 }
 </script>
 
 <style scoped>
+@media only screen and (min-width:300px) and (max-width: 301px){
+  section{
+    margin-bottom: 100px;
+  }
+  .login{
+  width: 90%;
+  margin-left: 10px;
+  height: 45px;
+}
+}
+@media only screen and (min-width:320px) and (max-width: 321px){
+  section{
+    margin-bottom: 100px;
+  }
+  .login{
+  width: 91%;
+  margin-left: 11px;
+  height: 45px;
+}
+}
+@media only screen and (min-width:375px) and (max-width: 376px){
+  section{
+    margin-bottom: 100px;
+    /* margin-left: 50px; */
+  }
+  .login{
+  width: 93%;
+  margin-left: 10px;
+  height: 45px;
+}
+}
+@media only screen and (min-width:425px) and (max-width: 426px){
+  section{
+    margin-bottom: 100px;
+    /* margin-left: 50px; */
+  }
+  .login{
+  width: 93%;
+  margin-left: 10px;
+  height: 45px;
+}
+}
+section{
+  /* padding-bottom: 1px; */
+  overflow-x: hidden; 
+}
+button{
+  width: 97%;
+  margin-left: 10px;
+  height: 45px;
+}
+input{
+  margin-top: 40px;
+}
 .card{
+  height: 370px;
   border-radius: 10px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow:  10px 10px 10px #cccccc,

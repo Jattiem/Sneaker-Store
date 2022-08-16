@@ -1,4 +1,5 @@
 <template>
+<Navbar/>
   <section v-if="products" class="admin vh-100">
     <h2 class="h2 pt-2">Admin</h2>
     <a href="" class="add">Add product</a>
@@ -38,9 +39,11 @@
       </tbody>
     </table>
   </section>
+            <!-- <div v-else>Hello</div> -->
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
 export default {
   props: ["product"],
   mounted() {
@@ -53,10 +56,15 @@ export default {
       return this.$store.state.products;
     },
   },
+    components: { Navbar }
 };
 </script>
 
 <style scoped>
+#delete{
+  border: none;
+  background: none;
+}
 .des {
   width: 40%;
 }

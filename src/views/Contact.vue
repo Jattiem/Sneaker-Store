@@ -1,4 +1,5 @@
 <template>
+<Navbar/>
  <section class="vh-100 gradient-custom">
   <div class="container">
     <div class="row justify-content-center align-items-center h-100">
@@ -54,33 +55,30 @@
       </div>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><router-link class="page-link"  to="/register">Previous</router-link></li>
-    <!-- <li class="page-item"><a class="page-link" href="/products">1</a></li>
-    <li class="page-item"><a class="page-link" href="/">2</a></li>
-    <li class="page-item"><a class="page-link" href="/about">3</a></li> -->
-    <li class="page-item"><router-link class="page-link"  to="/about">Next</router-link></li>
-  </ul>
-</nav>
 </section>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
 export default {
-    data(){
+    data() {
         return {
             name: "",
             surname: "",
             email: "",
             number: "",
             comment: ""
-        }
-    }  
+        };
+    },
+    components: { Navbar }
 }
 </script>
 
 <style scoped>
+section{
+  /* padding-top: -70px; */
+  overflow-x: hidden;
+}
 .page-link{
   color: rgba(0, 0, 0, 0.795);
   /* background-color: gray; */
@@ -100,48 +98,103 @@ box-shadow:  10px 10px 10px #cccccc,
   margin-top: 170px;
 }
   @media only screen and (min-width:300px) and (max-width: 301px){
+    #comment{
+      margin-top: -20px;
+    }
+    #email{
+      /* margin-bottom: 10px; */
+      margin-top: -20px;
+    }
   .card{
-    height: 450px;
+    height: 440px;
   }
   input{
     margin-bottom: 10px;
   }
   section{
+    /* margin-top: -50px; */
     /* padding-top: -40px; */
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+       /* overflow-x: hidden; */
+       /* padding-bottom: 50px; */
   }
 }
   @media only screen and (min-width:320px) and (max-width: 321px){
+     #comment{
+      margin-top: -20px;
+    }
+    #email{
+      /* margin-bottom: 10px; */
+      margin-top: -20px;
+    }
   .card{
     height: 450px;
   }
   input{
     margin-bottom: 10px;
+    /* padding: 10px; */
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+       /* overflow-x: hidden; */
   }
 }
  @media only screen and (min-width:375px) and (max-width: 376px){
+   #comment{
+      margin-top: -20px;
+    }
+    #email{
+      /* margin-bottom: 10px; */
+      margin-top: -20px;
+    }
   .card{
     height: 450px;
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 70px;
+    margin-bottom: 170px;
+       /* overflow-x: hidden; */
   }
   input{
     margin-bottom: 10px;
   }
 }
  @media only screen and (min-width:425px) and (max-width: 426px){
+   #comment{
+      margin-top: -20px;
+    }
+    #email{
+      /* margin-bottom: 10px; */
+      margin-top: -20px;
+    }
   .card{
     height: 450px;
   }
   section{
     /* padding-top: -40px; */
-    margin-bottom: 70px;
+    margin-bottom: 170px;
+    /* overflow-x: hidden; */
+  }
+  input{
+    margin-bottom: 10px;
+  }
+}
+ @media only screen and (min-width:768px) and (max-width: 769px){
+   #comment{
+      margin-top: -20px;
+    }
+    #email{
+      /* margin-bottom: 10px; */
+      margin-top: -20px;
+    }
+  .card{
+    height: 360px;
+  }
+  section{
+    /* padding-top: -40px; */
+    margin-bottom: 100px;
+       /* overflow-x: hidden; */
   }
   input{
     margin-bottom: 10px;

@@ -1,4 +1,5 @@
 <template>
+<Navbar/>
   <section style="background-color: #eee;">
   <div class="container">
     <h2 class="text-center">Profile</h2>
@@ -74,8 +75,12 @@
 </template>
 
 <script>
+// import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/Navbar.vue';
 export default {
-
+  components: {
+    Navbar,
+}
 }
 </script>
 

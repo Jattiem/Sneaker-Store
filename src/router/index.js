@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue';
+
 import ProductsView from '../views/ProductsView.vue';
 import ProductView from '../views/ProductView.vue';
 import LoginView from '../views/LoginView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import AdminView from '../views/AdminView.vue';
 import AboutView from '../views/AboutView.vue';
-import CartView from '../views/Cart.vue';
+// import CartView from '../views/Cart.vue';
 import Profile from '../views/Profile.vue';
 import contact from '../views/Contact.vue';
+import Landing from '../views/Landing.vue';
 
 const routes = [
   {
@@ -48,11 +50,6 @@ const routes = [
     component: AdminView
   },
   {
-    path: '/cart',
-    name: 'cart',
-    component: CartView
-  },
-  {
     path: '/profile',
     name: 'profile',
     component: Profile
@@ -61,6 +58,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: contact
+  },
+  {
+    path: '/landing',
+    name: 'landing',
+    component: Landing
   },
 ]
 

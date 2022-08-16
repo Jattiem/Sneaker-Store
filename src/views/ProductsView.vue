@@ -1,8 +1,10 @@
 <template>
+<Navbar/>
 <Cards/>
 </template>
 <script>
 import Cards from "../components/Cards.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
   computed:{
@@ -12,7 +14,8 @@ export default {
   },
   components: {
     Cards,
-  },
+    Navbar
+},
   mounted(){
     //this.$store.dispatch('getProducts');
     // this.$store.dispatch('clearSingleProduct');
